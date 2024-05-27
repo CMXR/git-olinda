@@ -1,0 +1,13 @@
+
+
+@mixin condicon ($color-bg) {
+    background-color: $color-bg;
+
+    // declarar condicones 
+    @if $color-bg == orange{
+        border: 1px solid black;
+    }
+    @else{
+        border: 2px solid white;
+    }
+}

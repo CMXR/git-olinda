@@ -1,0 +1,25 @@
+/* decoracion global*/
+.nav-link:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    
+} 
+
+.boton-opacidad:hover{
+    opacity: 100%;
+}
+
+.decoracion-escalar:hover{
+    scale: 98%;
+    opacity: 80%;
+}
+
+.pagina-actual{
+    font-weight: bold;
+}
+
+.decoracion-productos {
+    opacity: 90%;
+    margin: 1px;
+    background-color: #f5e4d8;
+}

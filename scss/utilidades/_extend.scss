@@ -1,0 +1,50 @@
+//
+@import "listas";
+
+%medidas-logo-principal{
+    margin-left: 5px;
+    width: 60px;
+}
+
+%medidas-redes-sociales{
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+}
+%display-flex-center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%alineacion-estilo-borde{
+    text-align: center;
+    font-weight: bold;
+}
+
+%decoracion-productos {
+    opacity: 90%;
+    margin: 1px;
+    background-color: nth($list-colores-olinda, 1);
+}
+
+%boton-contacto{
+    background-color: nth($list-colores-olinda, 1);
+    border: 1px nth($list-colores-olinda, 2) solid;
+    border-radius: 5px;
+    border-radius: 14px;
+    opacity: 85%;
+    height: 40px;
+}
+%boton-contacto-p{
+    font-weight: bold;
+    font-size: larger;
+}
+
+%titulos-globalles{
+    background-color: #e2d0c3;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
