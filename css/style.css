@@ -18,12 +18,6 @@
   font-weight: bold;
 }
 
-.decoracion-productos {
-  opacity: 90%;
-  margin: 1px;
-  background-color: #f5e4d8;
-}
-
 footer .logo-cc img, header .color-primario .container-fluid .navbar-brand img {
   margin-left: 5px;
   width: 60px;
@@ -93,11 +87,10 @@ header .posicion-menu {
 }
 
 main {
-  /*PAGINAS INDEX*/
-  /*PAGINAS NOSOTROS*/
-  /*PAGINAS LOCALES*/
-  /*PAGINAS BLOCK*/
-  /*PAGINAS PRODUCTO*/
+  /*INDEX*/
+  /* decoracion global*/
+  /* decoracion global*/
+  /* decoracion global*/
 }
 main .promo-envio {
   display: flex;
@@ -181,6 +174,91 @@ main .catalogo_promociones p {
   font-weight: bold;
   font-size: small;
 }
+@media screen and (min-width: 1280px) {
+  main .boton_saber_mas {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    border-radius: 15px;
+    top: -5.4vw;
+    font-size: 1vw;
+    width: 15%;
+    height: 4vw;
+    padding-top: 1%;
+  }
+  main .boton_saber_mas img {
+    width: 20%;
+    padding-bottom: 15px;
+  }
+  main .catalogo_promociones {
+    position: relative;
+    top: -5vw;
+    grid-template-columns: repeat(4, 1fr); /*columna*/
+  }
+  main .catalogo_promociones p, main .catalogo_promociones h6 {
+    font-weight: bold;
+    font-size: large;
+  }
+  main .catalogo_promociones .img_promo1 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+main .nav-link:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+main .boton-opacidad:hover {
+  opacity: 100%;
+}
+main .decoracion-escalar:hover {
+  scale: 98%;
+  opacity: 80%;
+}
+main .pagina-actual {
+  font-weight: bold;
+}
+main footer .logo-cc img, footer .logo-cc main img, main header .color-primario .container-fluid .navbar-brand img, header .color-primario .container-fluid .navbar-brand main img {
+  margin-left: 5px;
+  width: 60px;
+}
+main footer .redes-sociales img, footer .redes-sociales main img, main header .color-primario .container-fluid .redes-sociales img, header .color-primario .container-fluid .redes-sociales main img {
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+}
+main .contenedor-productos .producto .img-producto .contenedor-botones-accion .contenedor-carrito, main .contenedor-productos .producto .img-producto .contenedor-botones-accion .contenedor-megusta, main .contenedor-productos .producto .img-producto .contenedor-botones-accion, main .contenedor-productos .producto .img-producto p, main .contenedor-locales .info, main .boton_saber_mas, main .titulo-prmocion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .catalogo_promociones h4, main .catalogo_promociones h6 {
+  text-align: center;
+  font-weight: bold;
+}
+main .catalogo_promociones .img_promo1, main .catalogo_promociones .decoracion-productos {
+  opacity: 90%;
+  margin: 1px;
+  background-color: #f5e4d8;
+}
+main .contenedor-contactanos .for-contactanos .boton-contactanos, main .contenedor-nosotros .mision-vision .boton-contactanos {
+  background-color: #f5e4d8;
+  border: 1px #b8a191 solid;
+  border-radius: 5px;
+  border-radius: 14px;
+  opacity: 85%;
+  height: 40px;
+}
+main .contenedor-contactanos .for-contactanos .boton-contactanos p, main .contenedor-nosotros .mision-vision .boton-contactanos p {
+  font-weight: bold;
+  font-size: larger;
+}
+main .titulo-producto, main .titulo-block, main .titulo-local {
+  background-color: #e2d0c3;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
 main .contenedor-nosotros {
   position: relative;
   scale: 80%;
@@ -197,6 +275,72 @@ main .contenedor-nosotros .img-mis-vis img {
   width: 100%;
   position: relative;
   top: 20px;
+}
+@media screen and (min-width: 1280px) {
+  main .contenedor-nosotros {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    scale: 70%;
+  }
+  main .contenedor-nosotros .img-mis-vis img {
+    width: 100%;
+  }
+}
+main .nav-link:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+main .boton-opacidad:hover {
+  opacity: 100%;
+}
+main .decoracion-escalar:hover {
+  scale: 98%;
+  opacity: 80%;
+}
+main .pagina-actual {
+  font-weight: bold;
+}
+main footer .logo-cc img, footer .logo-cc main img, main header .color-primario .container-fluid .navbar-brand img, header .color-primario .container-fluid .navbar-brand main img {
+  margin-left: 5px;
+  width: 60px;
+}
+main footer .redes-sociales img, footer .redes-sociales main img, main header .color-primario .container-fluid .redes-sociales img, header .color-primario .container-fluid .redes-sociales main img {
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+}
+main .contenedor-productos .producto .img-producto .contenedor-botones-accion .contenedor-carrito, main .contenedor-productos .producto .img-producto .contenedor-botones-accion .contenedor-megusta, main .contenedor-productos .producto .img-producto .contenedor-botones-accion, main .contenedor-productos .producto .img-producto p, main .contenedor-locales .info, main .boton_saber_mas, main .titulo-prmocion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .catalogo_promociones h4, main .catalogo_promociones h6 {
+  text-align: center;
+  font-weight: bold;
+}
+main .catalogo_promociones .img_promo1, main .catalogo_promociones .decoracion-productos {
+  opacity: 90%;
+  margin: 1px;
+  background-color: #f5e4d8;
+}
+main .contenedor-contactanos .for-contactanos .boton-contactanos, main .contenedor-nosotros .mision-vision .boton-contactanos {
+  background-color: #f5e4d8;
+  border: 1px #b8a191 solid;
+  border-radius: 5px;
+  border-radius: 14px;
+  opacity: 85%;
+  height: 40px;
+}
+main .contenedor-contactanos .for-contactanos .boton-contactanos p, main .contenedor-nosotros .mision-vision .boton-contactanos p {
+  font-weight: bold;
+  font-size: larger;
+}
+main .titulo-producto, main .titulo-block, main .titulo-local {
+  background-color: #e2d0c3;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
 }
 main .titulo-local h2 {
   color: white;
@@ -277,6 +421,83 @@ main .contenedor-contactanos .for-contactanos .for-telefono {
 main .contenedor-contactanos .for-contactanos .for-comentario {
   grid-column: span 2;
 }
+@media screen and (min-width: 1280px) {
+  main .titulo-local h2 {
+    font-size: 1.5vw;
+  }
+  main .contenedor-locales {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    scale: 97%;
+  }
+  main .contenedor-locales .info img {
+    width: 1.5vw;
+  }
+  main .contenedor-locales .info p {
+    font-size: 1.4vw;
+  }
+  main .contenedor-contactanos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 20px #f5e4d8 solid;
+    padding: 20px;
+  }
+}
+main .nav-link:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+main .boton-opacidad:hover {
+  opacity: 100%;
+}
+main .decoracion-escalar:hover {
+  scale: 98%;
+  opacity: 80%;
+}
+main .pagina-actual {
+  font-weight: bold;
+}
+main footer .logo-cc img, footer .logo-cc main img, main header .color-primario .container-fluid .navbar-brand img, header .color-primario .container-fluid .navbar-brand main img {
+  margin-left: 5px;
+  width: 60px;
+}
+main footer .redes-sociales img, footer .redes-sociales main img, main header .color-primario .container-fluid .redes-sociales img, header .color-primario .container-fluid .redes-sociales main img {
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+}
+main .contenedor-productos .producto .img-producto .contenedor-botones-accion .contenedor-carrito, main .contenedor-productos .producto .img-producto .contenedor-botones-accion .contenedor-megusta, main .contenedor-productos .producto .img-producto .contenedor-botones-accion, main .contenedor-productos .producto .img-producto p, main .boton_saber_mas, main .titulo-prmocion, main .contenedor-locales .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .catalogo_promociones h4, main .catalogo_promociones h6 {
+  text-align: center;
+  font-weight: bold;
+}
+main .catalogo_promociones .img_promo1, main .catalogo_promociones .decoracion-productos {
+  opacity: 90%;
+  margin: 1px;
+  background-color: #f5e4d8;
+}
+main .contenedor-nosotros .mision-vision .boton-contactanos, main .contenedor-contactanos .for-contactanos .boton-contactanos {
+  background-color: #f5e4d8;
+  border: 1px #b8a191 solid;
+  border-radius: 5px;
+  border-radius: 14px;
+  opacity: 85%;
+  height: 40px;
+}
+main .contenedor-nosotros .mision-vision .boton-contactanos p, main .contenedor-contactanos .for-contactanos .boton-contactanos p {
+  font-weight: bold;
+  font-size: larger;
+}
+main .titulo-producto, main .titulo-block, main .titulo-local {
+  background-color: #e2d0c3;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
 main .titulo-block h2 {
   color: rgb(66, 66, 66);
   font-size: 5vw;
@@ -318,10 +539,55 @@ main .cargando-mas {
   left: 45%;
   top: -40px;
 }
+@media screen and (min-width: 1280px) {
+  main {
+    /*Pagina Block*/
+  }
+  main .titulo-block h2 {
+    font-size: 1.5vw;
+  }
+  main .contenedor-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  main .contenedor-block .contenedor-pos-uno {
+    grid-row: span 3;
+  }
+  main .contenedor-block .contenedor-pos-uno img {
+    height: 45%;
+  }
+  main .contenedor-block img {
+    height: 18vw;
+  }
+  main .paginas-siguientes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .paginas-siguientes .page-item a {
+    text-decoration: none;
+    color: #252525;
+  }
+  main .paginas-siguientes .pag-actual {
+    opacity: 70%;
+    font-weight: bold;
+    scale: 110%;
+  }
+  main .paginas-siguientes .sig-ant {
+    font-weight: bold;
+  }
+  main .cargando {
+    display: none;
+  }
+}
 main .titulo-producto h2 {
   color: rgb(66, 66, 66);
   font-size: 5vw;
   padding: 7px;
+}
+main .desactivado-mobile {
+  display: none;
 }
 main .contenedor-productos {
   width: 90%;
@@ -331,9 +597,6 @@ main .contenedor-productos {
   right: auto;
   left: 5%;
   gap: 30px;
-}
-main .contenedor-productos .desactivado-mobile {
-  display: none;
 }
 main .contenedor-productos .contenedor-datos-filtros .contenedor-categorias {
   display: flex;
@@ -426,6 +689,60 @@ main .contenedor-productos .producto .precio-producto .ahora {
 main .paginas-listado {
   position: relative;
   left: 100%;
+}
+@media screen and (min-width: 1280px) {
+  main {
+    /*Pagina Producto*/
+  }
+  main .titulo-producto h2 {
+    font-size: 1.5vw;
+  }
+  main .contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    scale: 97%;
+  }
+  main .contenedor-productos .contenedor-datos-filtros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    grid-row: span 4;
+    background-color: #fde7d8;
+    opacity: 95%;
+  }
+  main .contenedor-productos .contenedor-datos-filtros h5 {
+    font-size: 30px;
+    text-decoration: underline;
+    text-align: center;
+  }
+  main .contenedor-productos .contenedor-datos-filtros .contenedor-categorias h6 {
+    font-size: larger;
+    text-decoration: underline;
+    position: relative;
+    font-weight: 600;
+    left: -20px;
+  }
+  main .contenedor-categorias-tag {
+    width: 60%;
+    position: relative;
+    top: 5px;
+  }
+  main .contenedor-categorias-tag p {
+    font-size: large;
+    font-weight: bold;
+  }
+  main .contenedor-categorias-tag .boton-tag {
+    background-color: #f5e4d8;
+    border: 1px #b8a191 solid;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 14px;
+    margin: 3px;
+  }
+  main .texto-producto {
+    display: none;
+  }
 }
 
 footer {

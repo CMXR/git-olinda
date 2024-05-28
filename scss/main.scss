@@ -8,6 +8,7 @@
 @import "utilidades/mixin";
 @import "utilidades/extend";
 
+
 header{
     .color-primario{
         background-color:nth($list-colores-olinda, 1);
@@ -42,7 +43,7 @@ header{
 }
 
 main{
-    /*PAGINAS INDEX*/
+    //PAGINAS INDEX
     // Promocion de envio 
     .promo-envio {
         @include display-flex-row-center;
@@ -135,320 +136,60 @@ main{
         }
 
     }
+    // Media Query Index
 
-    /*PAGINAS NOSOTROS*/
-    .contenedor-nosotros{
-        position: relative;
-        scale: 80%;
-        .mision-vision{
-            p{
-                text-align: justify;
-                font-size: 20px;
-                scale: 90%;
+    //Ordenador
+
+        /*INDEX*/
+    @media screen and (min-width: 1280px){
+        .boton_saber_mas{
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+            border-radius: 15px;
+            top: -5.4vw;
+            font-size: 1vw;
+            width: 15%;
+            height: 4vw;
+            padding-top: 1%;
+            img {
+                width: 20%;
+                padding-bottom: 15px;
+        
             }
-            h5{
+        }
+        .catalogo_promociones{
+            position: relative;
+            top: -5vw;
+            grid-template-columns: repeat(4, 1fr) ; /*columna*/
+            p, h6{
                 font-weight: bold;
+                font-size: large;
             }
-            .boton-contactanos{
-                @extend %boton-contacto;
-                p{
-                    @extend %boton-contacto-p;
-                
-                }
-            }
-        } 
-        .img-mis-vis {
-            img{
-            width: 100%;
-            position: relative;
-            top: 20px;
-            }
-        
-        }
-    }
-
-    /*PAGINAS LOCALES*/
-    .titulo-local{
-        @extend %titulos-globalles;
-        h2{
-            @include titulo-global-p(nth($list-colores-decoracion, 1));
-        }
-    }
-    .contenedor-locales{
-        .local{
-            text-align: center;
-            scale: 95%;
-            iframe{
-                width: 100%;
-            }
-        }
-        .info{
-            @extend %display-flex-center-center;
-            border: 3px #f5e4d8 solid;
-            scale: 97%;
-            img{
-                width: 5vw;
-                height: 100%;
-                opacity: 80%;
-            
-            }
-            p{
-                font-size: 3vw;
-                margin-top: 15px;
-                margin-left:10px ;
-             
-            
-            }
-        }
-    }
-    .contenedor-contactanos{
-
-        border: 10px #f5e4d8 solid;
-        padding: 10px;
-        .contacatanos{
-            margin: 30px;
-            width: 60%;
-            display: grid;
-            grid-template-columns: 30% 70%;
-            align-items: center;
-            position: relative;
-            left: 10%;
-            img{
-                width: 35%;
-                opacity: 60%;
-                position: relative;
-                left: 70%;
-            
-            
-            }
-            p{
-                margin: 20px;
-                font-weight: 500;
-            
-            }
-        }
-        .for-contactanos{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            width: 80%;
-            row-gap: 20px;
-            position: relative;
-            left: 9%;
-            input, textarea{
-                width: 100%;
-            }
-            .titulo-for{
+            .img_promo1{
                 grid-column: span 2;
-                text-align: center;
-                background-color: #f5e4d8;
-                padding-top: 5px;
+                grid-row: span 2;
             }
-            .for-datos{
-                grid-column: span 2;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                column-gap: 10px;
-                height: 20px;
-               
-            }
-            .for-telefono{
-                grid-column: span 2;
-            }
-            .for-comentario{
-                grid-column: span 2;
-            }
-            .boton-contactanos{
-                @extend %boton-contacto;
-                p{
-                    @extend %boton-contacto-p;
-                
-                }
-            }
-        
-        }
-    
-    }
-
-    /*PAGINAS BLOCK*/
-    .titulo-block{
-        @extend %titulos-globalles;
-        h2{
-            @include titulo-global-p(nth($list-colores-decoracion, 3));
-        }
-    }
-    .contenedor-block {
-
-        gap: 1vw;
-        width: 90%;
-        position: relative;
-        left: 5%;
-        scale: 97%;
-        img{
-            width: 100%;
-            height: 75vw;
-            position: relative;
-            object-fit: cover;
-        }
-        .contenedor-blanco{
-
-            box-shadow: 1px 3px 3px rgb(156, 156, 156);
-        }
-        .contenedor-color{
-            background-color: #fde7d8;
-            box-shadow: 1px 3px 3px rgb(156, 156, 156);
-        
-        }
-        // global pos para block
-        .pos{
-            scale: 90%;
-            p{
-                text-align: justify;
-                overflow: hidden;
-                text-overflow: ellipsis;
             
-            }
+        }
         
-        }
     }
 
-    //carga  y paginas siguientes
-    .paginas-siguientes{
-        display: none;
-    }
+    //PAGINAS NOSOTROS
+    @import "html/nosotros";
+
+    //PAGINAS LOCALES
+    @import "html/locales";
+
+    //PAGINAS BLOCK
+
+    @import "html/block";
+
     
-    .cargando-mas{
-        position: relative;
-        left: 45%;
-        top: -40px;
+    // PAGINAS PRODUCTO
+
+    @import "html/producto";
     
-    
-    }
-    /*PAGINAS PRODUCTO*/
-    .titulo-producto{
-        @extend %titulos-globalles;
-        h2{
-            @include titulo-global-p(nth($list-colores-decoracion, 3));
-        }
-    }
-    .contenedor-productos{
-        width: 90%;
-        @include posicion-relativa(20px,auto,auto,5%);
-        gap: 30px;
-        //Desactivado pestaña para mobile
-        .desactivado-mobile{
-            display: none;
-        }
-
-        .contenedor-datos-filtros{
-            .contenedor-categorias{
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                width: 60%;
-            }
-        }
-        .producto{
-            .img-producto{
-                width: 100%;
-                height: 500px;
-                p{
-                    @extend %display-flex-center-center;
-                    background-color: red;
-                    color: white;
-                    height: 30px;
-                    width: 60px;
-                    position: relative;
-                    top: 15px;
-                }
-                .contenedor-botones-accion{
-                    @extend %display-flex-center-center;
-                    opacity: 85%;
-                    background-color: #fde7d8;
-                    padding-top:5px;
-                    padding-bottom:5px;
-                    position: relative;
-                    top: 390px;
-                    .contenedor-megusta{
-                        @extend %display-flex-center-center;
-                        width: 10%;
-                        height: 40px;
-                        border: 1px #b8a191 solid;
-                        label{
-                            font-size: 30px;
-                        }
-                    }
-                    button{
-                        width: 70%;
-                        height: 40px;
-                        background-color: #f5e4d8;
-                        border: 1px #b8a191 solid;
-                        font-size: larger;
-                        font-weight: bold;
-                    }
-                    .contenedor-carrito{
-                        @extend %display-flex-center-center;
-                        width: 10%;
-                        height: 40px;
-                        border: 1px #b8a191 solid;
-                        img{
-                            width: 27px; 
-                        }
-                    }
-
-                    
-                }
-            }
-            .text-producto{
-                scale: 95%;
-                h5{
-                    margin-top: 5px;
-                    text-align: center;
-                    font-weight: 600;
-                    font-size: 30px;
-                }
-                .texto-producto{
-                    P{
-                        text-align: center;
-                    }
-                    
-                }
-                .estrella{
-                    display: flex;
-                    justify-content: center;
-                    column-gap: 3px;
-                    .estrella-encendida{
-                        font-size:large;
-                        color: #b8a191;
-                    }
-                    .estrella-apagada{
-                        font-size: large;
-                        color: #fde7d8;
-                    }
-                
-                }
-                
-            }
-            .precio-producto{
-                display: flex;
-                justify-content: center;
-                column-gap: 10px;
-                .antes{
-                    opacity: 80%;
-                    font-weight: 500;
-                    text-decoration: line-through;
-                }
-                .ahora{
-                    font-weight:800;
-                }
-            }
-        }
-    }
-
-    .paginas-listado{
-        position: relative;
-        left: 100%;
-    }
-
 }
 
 
@@ -484,3 +225,7 @@ footer{
         }
     }
 }
+
+
+
+

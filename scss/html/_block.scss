@@ -1,2 +1,118 @@
 
 @import "../utilidades/variables";
+@import "../utilidades/animaciones";
+@import "../utilidades/listas";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+
+
+.titulo-block{
+    @extend %titulos-globalles;
+    h2{
+        @include titulo-global-p(nth($list-colores-decoracion, 3));
+    }
+}
+.contenedor-block {
+
+    gap: 1vw;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    scale: 97%;
+    img{
+        width: 100%;
+        height: 75vw;
+        position: relative;
+        object-fit: cover;
+    }
+    .contenedor-blanco{
+
+        box-shadow: 1px 3px 3px rgb(156, 156, 156);
+    }
+    .contenedor-color{
+        background-color: #fde7d8;
+        box-shadow: 1px 3px 3px rgb(156, 156, 156);
+    
+    }
+    // global pos para block
+    .pos{
+        scale: 90%;
+        p{
+            text-align: justify;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        
+        }
+    
+    }
+}
+
+//carga  y paginas siguientes
+.paginas-siguientes{
+    display: none;
+}
+
+.cargando-mas{
+    position: relative;
+    left: 45%;
+    top: -40px;
+
+
+}
+
+
+//Ordenador
+@media screen and (min-width: 1280px){
+   /*Pagina Block*/
+    
+   .titulo-block{
+        h2{
+            font-size: 1.5vw;
+        }
+    }
+    .contenedor-block {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3, 1fr);
+        .contenedor-pos-uno{
+            grid-row: span 3;
+            img{
+                height: 45%;
+            }
+        }
+        img{
+
+            height: 18vw;
+        
+        }
+
+    }
+
+
+    .paginas-siguientes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .page-item{
+            a{
+                text-decoration: none;
+                color: #252525;
+                
+            }
+        }
+        .pag-actual{
+            opacity: 70%;
+            font-weight: bold;
+            scale: 110%;
+        }
+        .sig-ant{
+            font-weight: bold;
+        }
+        
+    }
+
+    
+    .cargando{
+        display: none;
+    }
+}

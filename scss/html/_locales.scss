@@ -1,0 +1,141 @@
+
+@import "../utilidades/variables";
+@import "../utilidades/animaciones";
+@import "../utilidades/listas";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+
+
+.titulo-local{
+    @extend %titulos-globalles;
+    h2{
+        @include titulo-global-p(nth($list-colores-decoracion, 1));
+    }
+}
+.contenedor-locales{
+    .local{
+        text-align: center;
+        scale: 95%;
+        iframe{
+            width: 100%;
+        }
+    }
+    .info{
+        @extend %display-flex-center-center;
+        border: 3px #f5e4d8 solid;
+        scale: 97%;
+        img{
+            width: 5vw;
+            height: 100%;
+            opacity: 80%;
+        
+        }
+        p{
+            font-size: 3vw;
+            margin-top: 15px;
+            margin-left:10px ;
+         
+        
+        }
+    }
+}
+.contenedor-contactanos{
+
+    border: 10px #f5e4d8 solid;
+    padding: 10px;
+    .contacatanos{
+        margin: 30px;
+        width: 60%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+        position: relative;
+        left: 10%;
+        img{
+            width: 35%;
+            opacity: 60%;
+            position: relative;
+            left: 70%;
+        
+        
+        }
+        p{
+            margin: 20px;
+            font-weight: 500;
+        
+        }
+    }
+    .for-contactanos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+        row-gap: 20px;
+        position: relative;
+        left: 9%;
+        input, textarea{
+            width: 100%;
+        }
+        .titulo-for{
+            grid-column: span 2;
+            text-align: center;
+            background-color: #f5e4d8;
+            padding-top: 5px;
+        }
+        .for-datos{
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 10px;
+            height: 20px;
+           
+        }
+        .for-telefono{
+            grid-column: span 2;
+        }
+        .for-comentario{
+            grid-column: span 2;
+        }
+        .boton-contactanos{
+            @extend %boton-contacto;
+            p{
+                @extend %boton-contacto-p;
+            
+            }
+        }
+    
+    }
+
+}
+
+// Ordenador
+@media screen and (min-width: 1280px){
+    .titulo-local{
+        h2{
+            font-size: 1.5vw;
+        }
+    }
+
+    .contenedor-locales{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        scale: 97%;
+        .info{
+            img{
+                width: 1.5vw;
+            }
+            p{
+                font-size: 1.4vw;
+            }
+        }
+    }
+    .contenedor-contactanos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 20px #f5e4d8 solid;
+        padding: 20px;
+    
+    }
+
+
+
+}

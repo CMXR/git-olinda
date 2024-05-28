@@ -1,0 +1,54 @@
+
+@import "../utilidades/variables";
+@import "../utilidades/animaciones";
+@import "../utilidades/listas";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+
+.contenedor-nosotros{
+    position: relative;
+    scale: 80%;
+    .mision-vision{
+        p{
+            text-align: justify;
+            font-size: 20px;
+            scale: 90%;
+        }
+        h5{
+            font-weight: bold;
+        }
+        .boton-contactanos{
+            @extend %boton-contacto;
+            p{
+                @extend %boton-contacto-p;
+            
+            }
+        }
+    } 
+    .img-mis-vis {
+        img{
+        width: 100%;
+        position: relative;
+        top: 20px;
+        }
+    
+    }
+}
+
+
+// Ordenador
+@media screen and (min-width: 1280px){
+    .contenedor-nosotros{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        scale: 70%;
+        .img-mis-vis{
+            img{
+                width: 100%;
+        
+            }
+        }
+    }
+
+}

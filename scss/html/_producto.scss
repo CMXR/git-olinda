@@ -1,0 +1,197 @@
+
+.titulo-producto{
+    @extend %titulos-globalles;
+    h2{
+        @include titulo-global-p(nth($list-colores-decoracion, 3));
+    }
+}
+.desactivado-mobile{
+    display: none;
+}
+.contenedor-productos{
+    width: 90%;
+    @include posicion-relativa(20px,auto,auto,5%);
+    gap: 30px;
+    //Desactivado pestaña para mobile
+
+
+    .contenedor-datos-filtros{
+        .contenedor-categorias{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 60%;
+        }
+    }
+    .producto{
+        .img-producto{
+            width: 100%;
+            height: 500px;
+            p{
+                @extend %display-flex-center-center;
+                background-color: red;
+                color: white;
+                height: 30px;
+                width: 60px;
+                position: relative;
+                top: 15px;
+            }
+            .contenedor-botones-accion{
+                @extend %display-flex-center-center;
+                opacity: 85%;
+                background-color: #fde7d8;
+                padding-top:5px;
+                padding-bottom:5px;
+                position: relative;
+                top: 390px;
+                .contenedor-megusta{
+                    @extend %display-flex-center-center;
+                    width: 10%;
+                    height: 40px;
+                    border: 1px #b8a191 solid;
+                    label{
+                        font-size: 30px;
+                    }
+                }
+                button{
+                    width: 70%;
+                    height: 40px;
+                    background-color: #f5e4d8;
+                    border: 1px #b8a191 solid;
+                    font-size: larger;
+                    font-weight: bold;
+                }
+                .contenedor-carrito{
+                    @extend %display-flex-center-center;
+                    width: 10%;
+                    height: 40px;
+                    border: 1px #b8a191 solid;
+                    img{
+                        width: 27px; 
+                    }
+                }
+
+                
+            }
+        }
+        .text-producto{
+            scale: 95%;
+            h5{
+                margin-top: 5px;
+                text-align: center;
+                font-weight: 600;
+                font-size: 30px;
+            }
+            .texto-producto{
+                P{
+                    text-align: center;
+                }
+                
+            }
+            .estrella{
+                display: flex;
+                justify-content: center;
+                column-gap: 3px;
+                .estrella-encendida{
+                    font-size:large;
+                    color: #b8a191;
+                }
+                .estrella-apagada{
+                    font-size: large;
+                    color: #fde7d8;
+                }
+            
+            }
+            
+        }
+        .precio-producto{
+            display: flex;
+            justify-content: center;
+            column-gap: 10px;
+            .antes{
+                opacity: 80%;
+                font-weight: 500;
+                text-decoration: line-through;
+            }
+            .ahora{
+                font-weight:800;
+            }
+        }
+    }
+}
+
+.paginas-listado{
+    position: relative;
+    left: 100%;
+}
+
+@media screen and (min-width: 1280px){
+    /*Pagina Producto*/
+    
+    .titulo-producto{
+        h2{
+            font-size: 1.5vw;
+        }
+    }
+
+    .contenedor-productos{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        scale: 97%;
+        .contenedor-datos-filtros{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            grid-row: span 4;
+            background-color: #fde7d8;
+            opacity: 95%;
+            h5{
+                font-size: 30px;
+                text-decoration:underline;
+                text-align: center;
+            }
+            .contenedor-categorias{
+                h6{
+                    font-size: larger;
+                    text-decoration: underline;
+                    position: relative;
+                    font-weight: 600;
+                    left: -20px;
+                }
+
+                
+                
+            }
+            
+        }
+        
+    
+    }
+
+    .contenedor-categorias-tag{
+        width:60%;
+        position: relative;
+        top: 5px;
+        p{
+            font-size: large;
+            font-weight: bold;
+        }
+        .boton-tag{
+            background-color: #f5e4d8;
+            border: 1px #b8a191 solid;
+            font-size: larger;
+            font-weight: bold;
+            border-radius: 14px;
+            margin: 3px;
+        }
+    }
+
+
+
+
+    .texto-producto{
+        display: none;
+    }
+
+}
