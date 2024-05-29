@@ -13,7 +13,6 @@
     }
 }
 .contenedor-block {
-
     gap: 1vw;
     width: 90%;
     position: relative;
@@ -27,11 +26,11 @@
     }
     .contenedor-blanco{
 
-        box-shadow: 1px 3px 3px rgb(156, 156, 156);
+        box-shadow: 1px 3px 3px  nth($list-colores-decoracion, 3);
     }
     .contenedor-color{
-        background-color: #fde7d8;
-        box-shadow: 1px 3px 3px rgb(156, 156, 156);
+        background-color:  nth($list-colores-olinda, 1);
+        box-shadow: 1px 3px 3px  nth($list-colores-decoracion, 3);
     
     }
     // global pos para block
@@ -60,19 +59,15 @@
 
 }
 
-
-//Ordenador
-@media screen and (min-width: 1280px){
-   /*Pagina Block*/
-    
-   .titulo-block{
+@media screen and (min-width: 768px){
+    .titulo-block{
         h2{
             font-size: 1.5vw;
         }
     }
     .contenedor-block {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(3, 1fr);
         .contenedor-pos-uno{
             grid-row: span 3;
@@ -81,22 +76,16 @@
             }
         }
         img{
-
             height: 18vw;
-        
         }
 
     }
-
-
     .paginas-siguientes{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include display-flex-center-center;
         .page-item{
             a{
                 text-decoration: none;
-                color: #252525;
+                color: nth($list-colores-decoracion, 5);
                 
             }
         }
@@ -114,5 +103,16 @@
     
     .cargando{
         display: none;
+    }
+}
+//Ordenador
+@media screen and (min-width: 1280px){
+   /*Pagina Block*/
+    
+  
+    .contenedor-block {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+
     }
 }

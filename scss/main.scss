@@ -11,6 +11,7 @@
 
 header{
     .color-primario{
+        
         background-color:nth($list-colores-olinda, 1);
         border-bottom: 2px nth($list-colores-olinda , 2 ) solid;
         .container-fluid{
@@ -43,6 +44,7 @@ header{
 }
 
 main{
+    font-family: helvetica cursive;
     //PAGINAS INDEX
     // Promocion de envio 
     .promo-envio {
@@ -61,12 +63,10 @@ main{
             .envio{
                 font-weight: bold;
                 font-size: 3.5vw;
-                font-family: Arial, Helvetica, sans-serif;
             }
             .compras_sup{
                 font-size: 1.5vw;
                 text-align: center;
-                font-family: Arial, Helvetica, sans-serif;
             }
         }
     }
@@ -138,10 +138,8 @@ main{
     }
     // Media Query Index
 
-    //Ordenador
-
-        /*INDEX*/
-    @media screen and (min-width: 1280px){
+    
+    @media screen and (min-width: 768px){
         .boton_saber_mas{
             display: flex;
             justify-content: space-around;
@@ -161,7 +159,7 @@ main{
         .catalogo_promociones{
             position: relative;
             top: -5vw;
-            grid-template-columns: repeat(4, 1fr) ; /*columna*/
+            grid-template-columns: repeat(3, 1fr) ; /*columna*/
             p, h6{
                 font-weight: bold;
                 font-size: large;
@@ -170,6 +168,13 @@ main{
                 grid-column: span 2;
                 grid-row: span 2;
             }
+            
+        }
+    }
+   //Ordenador
+    @media screen and (min-width: 1280px){
+        .catalogo_promociones{
+            grid-template-columns: repeat(4, 1fr) ; /*columna*/
             
         }
         

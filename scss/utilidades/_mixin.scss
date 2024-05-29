@@ -12,6 +12,12 @@
     
 }
 
+@mixin relativa-izquierda($izquierda) {
+    position: relative;
+    left: $izquierda;
+    
+}
+
 @mixin titulo-global-p($color) {
     color: $color;
     font-size: 5vw;
@@ -28,3 +34,13 @@
     align-items: center;
 }
 
+@mixin display-flex-center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid-1-1-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

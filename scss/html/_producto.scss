@@ -29,8 +29,8 @@
             height: 500px;
             p{
                 @extend %display-flex-center-center;
-                background-color: red;
-                color: white;
+                background-color: nth($list-colores-decoracion ,2);
+                color: nth($list-colores-decoracion ,1);
                 height: 30px;
                 width: 60px;
                 position: relative;
@@ -39,7 +39,7 @@
             .contenedor-botones-accion{
                 @extend %display-flex-center-center;
                 opacity: 85%;
-                background-color: #fde7d8;
+                background-color: nth($list-colores-olinda ,1);
                 padding-top:5px;
                 padding-bottom:5px;
                 position: relative;
@@ -48,7 +48,7 @@
                     @extend %display-flex-center-center;
                     width: 10%;
                     height: 40px;
-                    border: 1px #b8a191 solid;
+                    border: 1px nth($list-colores-olinda ,2) solid;
                     label{
                         font-size: 30px;
                     }
@@ -56,8 +56,8 @@
                 button{
                     width: 70%;
                     height: 40px;
-                    background-color: #f5e4d8;
-                    border: 1px #b8a191 solid;
+                    background-color: nth($list-colores-olinda ,1);
+                    border: 1px nth($list-colores-olinda ,2) solid;
                     font-size: larger;
                     font-weight: bold;
                 }
@@ -65,7 +65,7 @@
                     @extend %display-flex-center-center;
                     width: 10%;
                     height: 40px;
-                    border: 1px #b8a191 solid;
+                    border: 1px nth($list-colores-olinda ,2) solid;
                     img{
                         width: 27px; 
                     }
@@ -94,11 +94,11 @@
                 column-gap: 3px;
                 .estrella-encendida{
                     font-size:large;
-                    color: #b8a191;
+                    color: nth($list-colores-olinda ,2);
                 }
                 .estrella-apagada{
                     font-size: large;
-                    color: #fde7d8;
+                    color: nth($list-colores-olinda ,1);
                 }
             
             }
@@ -121,18 +121,22 @@
 }
 
 .paginas-listado{
-    position: relative;
-    left: 100%;
+    @include relativa-izquierda(100%);
 }
-
-@media screen and (min-width: 1280px){
-    /*Pagina Producto*/
-    
+@media screen and (min-width: 768px){
     .titulo-producto{
         h2{
             font-size: 1.5vw;
         }
     }
+    .contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 1280px){
+    /*Pagina Producto*/
+    
 
     .contenedor-productos{
         display: grid;
@@ -144,7 +148,7 @@
             align-items: center;
             gap: 30px;
             grid-row: span 4;
-            background-color: #fde7d8;
+            background-color: nth($list-colores-olinda ,1);
             opacity: 95%;
             h5{
                 font-size: 30px;
@@ -155,9 +159,8 @@
                 h6{
                     font-size: larger;
                     text-decoration: underline;
-                    position: relative;
+                    @include relativa-izquierda(-20px);
                     font-weight: 600;
-                    left: -20px;
                 }
 
                 
@@ -178,8 +181,8 @@
             font-weight: bold;
         }
         .boton-tag{
-            background-color: #f5e4d8;
-            border: 1px #b8a191 solid;
+            background-color: nth($list-colores-olinda ,1);
+            border: 1px nth($list-colores-olinda ,2) solid;
             font-size: larger;
             font-weight: bold;
             border-radius: 14px;
