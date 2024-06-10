@@ -1,10 +1,4 @@
 
-@import "../utilidades/variables";
-@import "../utilidades/animaciones";
-@import "../utilidades/listas";
-@import "../utilidades/mixin";
-@import "../utilidades/extend";
-
 .contenedor-nosotros{
     scale: 80%;
     .mision-vision{
@@ -38,9 +32,8 @@
 // Ordenador
 @media screen and (min-width: 1280px){
     .contenedor-nosotros{
-        display: grid;
+        @include grid-1-1-column;
         align-items: center;
-        grid-template-columns: 1fr 1fr;
         scale: 70%;
         .img-mis-vis{
             img{

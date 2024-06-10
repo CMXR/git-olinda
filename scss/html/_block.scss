@@ -1,10 +1,4 @@
 
-@import "../utilidades/variables";
-@import "../utilidades/animaciones";
-@import "../utilidades/listas";
-@import "../utilidades/mixin";
-@import "../utilidades/extend";
-
 
 .titulo-block{
     @extend %titulos-globalles;
@@ -108,7 +102,6 @@
 //Ordenador
 @media screen and (min-width: 1280px){
    /*Pagina Block*/
-    
   
     .contenedor-block {
         display: grid;

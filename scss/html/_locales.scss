@@ -1,11 +1,4 @@
 
-@import "../utilidades/variables";
-@import "../utilidades/animaciones";
-@import "../utilidades/listas";
-@import "../utilidades/mixin";
-@import "../utilidades/extend";
-
-
 .titulo-local{
     @extend %titulos-globalles;
     h2{
