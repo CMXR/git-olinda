@@ -1,4 +1,5 @@
 
+
 .titulo-producto{
     @extend %titulos-globalles;
     h2{
@@ -24,6 +25,34 @@
         }
     }
     .producto{
+        .producto-uno{
+            background-image: url(../recursos/img-producto/jean-bolsilloas-atras.png);
+            width: 100%;
+        }
+        .producto-dos{
+            background-image: url(../recursos/img-producto/jean-flare-celeste.png);
+        }
+        .producto-tres{
+            background-image: url(../recursos/img-producto/jean-de-correa.png);
+        }
+        .producto-cuatro{
+            background-image: url(../recursos/img-producto/jean-tela-rigida.png);
+        }
+        .producto-cinco{
+            background-image: url(../recursos/img-producto/jean-elastico.png);
+        }
+        .producto-seis{
+            background-image: url(../recursos/img-producto/jean-maizz.png);
+        }
+        .producto-siete{
+            background-image: url(../recursos/img-producto/jean-pinzas.png);
+        }
+        .producto-ocho{
+            background-image: url(../recursos/img-producto/jean-un-boton.png);
+        }
+        .producto-nueve{
+            background-image: url(../recursos/img-producto/jean-un-boton-madera.png);
+        }
         .img-producto{
             width: 100%;
             height: 500px;
